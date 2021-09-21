@@ -14,6 +14,31 @@ while(j<=n){
     j++;
 }
 
-for(var k=0;k<=12;k++){
+for(k=0;k<=5;k++){
     document.write("<br>This is :"+k );
+}
+
+var percent = 46.8;
+if(percent<=35){
+    document.write("<br>Failed");
+}
+else if(percent<60 && percent>35){
+    document.write("<br>average");
+}
+else if(percent<80 && percent>60){
+    document.write("<br>better");
+}
+else{
+    document.write("<br>Best");
+}
+
+switch(true){
+    case percent<35 :
+        document.write("<br>SWITCH FAILED");
+
+    case percent<75 && percent>35 :
+        document.write("<br>better");
+
+    case percent>75:
+        document.write("<br>Best");
 }
