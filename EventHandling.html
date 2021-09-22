@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="breif description about web page">
+    <meta name="Keywords" content="important keywords which are important to your webpage seperated by comma">
+    <meta name="author" content="Author name">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <style>
+        p{
+            border: 2px solid blue;
+            height: 50px;
+            width: 100px;
+        }
+    </style>
+    <title>Event Handling</title>
+
+    <script src="EventHandling.js"></script>
+</head>
+<body>
+    <div>
+        <button onclick="test();">Click Here</button>
+        <input type="button" value="ADD" onclick="makeAdd(23,45)">
+        <p onmouseover="anonymusHover()" onmouseleave="anonymusLeave()">This is paragraph</p>
+    </div>
+
+    <div>
+        <label for="">Enter Your name : </label>
+        <input type="text" id="name" onfocus="focusFunct()" onblur="blurFunct()">
+        <br>
+        <label for="">Checkbox : </label>
+        <input type="checkbox" onchange="changeEvent()" name="" id="">
+
+
+    </div>
+    <div>
+        <textarea name="" id="" cols="40" onselect="selectEvent()" rows="5"></textarea>
+    </div>
+</body>
+</html>
