@@ -18,24 +18,41 @@
         width: 600px;
         padding: 10px;
     }
+    #img{
+        
+    }
     </style>
 
-    <script src="DOM.js"></script>
+    
 </head>
 <body>
-    <figure>
-        <h2>Doremon</h2>
-        <br>
-        <img src="doremon.jpg" alt="">
-        <br>
-        <p>
-            Doraemon is a fictional character in the Japanese manga and anime series of the same name created by Fujiko Fujio,
-             the pen name of writing team Hiroshi Fujimoto and Motoo Abiko. 
-            He is a male robotic cat that travels back in time from the 22nd century to aid a preteen boy named Nobita.
-        </p>
+    <article  id="article">
+        <figure onclick="showChilds()">
+            <h2>Doremon</h2>
+            <br>
+            <img id="img" src="doremon.jpg" alt="">
+            <button onclick="zoomOut()">Zoom out image</button>
+            <button onclick="zoomIn()">Zoom in image</button>
+            <br>
+        
+            <p class="cl">
+                Doraemon is a fictional character in the Japanese manga and anime series of the same name created by Fujiko Fujio,
+                the pen name of writing team Hiroshi Fujimoto and Motoo Abiko.
+            </p>
+            <p>
+                He is a male robotic cat that travels back in time from the 22nd century to aid a preteen boy named Nobita.
+            </p>
+        </figure>
         <div>
-            <a href="#">Know More  here</a>
+            <a href="#" class="cl">Know More  here</a>
+            <section>
+                <form action="">
+                    <input type="radio" name="gender" id="male"><label for="">Male</label>
+                    <input type="radio" name="gender" id="female"><label for="">female</label>
+                </form>
+            </section>
         </div>
-    </figure>
+    </article>
+    <script src="DOM.js"></script>
 </body>
 </html>
