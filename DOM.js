@@ -64,6 +64,9 @@ paraNode.addEventListener("mouseover",function(){
 paraNode.addEventListener("mouseout",function(){
     changeStyle1();
 });
+paraNode.addEventListener("onclick",function(){
+    changeStyle2();
+});
 function changeStyle(){
     paraNode.style.backgroundColor = "yellow";
     paraNode.style.border = "2px solid red";
@@ -71,4 +74,8 @@ function changeStyle(){
 function changeStyle1(){
     paraNode.style.backgroundColor = "green";
     paraNode.style.border = "4px solid pink";
+}
+function changeStyle2(){
+    paraNode.style.backgroundColor = "red";
+    paraNode.style.border = "4px solid black";
 }
