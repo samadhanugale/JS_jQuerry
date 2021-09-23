@@ -175,6 +175,6 @@ function validate7(){
    }
 
    else{
-    mobNode.style.border = "3px solid green";
+    mobNode .style.border = "3px solid green";
    }
 }
