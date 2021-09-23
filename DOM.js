@@ -40,4 +40,35 @@ function zoomIn(){
      w = w+100;
     imgnode.height = h;
      imgnode.width = w;
- }
+}
+
+
+
+//to show and hide password by tikbox
+function showPass(){
+     let checknote  = document.getElementById("checkbox");
+     let passsnode = document.getElementById("pass");
+
+     if (checknote.checked==true){
+         passsnode.type = "text";
+    }
+     else{
+        passsnode.type = "password";
+    }
+}
+
+let paraNode = document.getElementById("para1");
+paraNode.addEventListener("mouseover",function(){
+    changeStyle();
+});
+paraNode.addEventListener("mouseout",function(){
+    changeStyle1();
+});
+function changeStyle(){
+    paraNode.style.backgroundColor = "yellow";
+    paraNode.style.border = "2px solid red";
+}
+function changeStyle1(){
+    paraNode.style.backgroundColor = "green";
+    paraNode.style.border = "4px solid pink";
+}
