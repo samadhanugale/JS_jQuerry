@@ -23,7 +23,9 @@
                 <tr><td>
                         <label for="fname">First Name:</label>
                     </td>
-                    <td> <input type="text" id="fname" name="myname" onblur="validate1()" ></td>
+                    <td> 
+                        <input type="text" id="fname" name="myname" onblur="validate1()" >
+                    </td>
                 </tr>
                 <tr><td></td><td><span id="error1"></span></td></tr>
                 
@@ -32,23 +34,31 @@
                 </tr>
                 <tr><td></td><td><span id="error2"></span></td></tr>
 
-                <tr><td><label for="pass">Password:</label></td>
-                    <td><input type="password" id="pass" placeholder="enter password" minlength="4" maxlength="8" onblur="validate3()"></td>
+                <tr><td><label>Password:</label></td>
+                    <td><input type="password" id="pass"  onblur="validate3()"></td>
                     <tr><td></td><td><span id="error3"></span></td></tr>
                 </tr>
+                
                 <tr><td><label for="c_pass">Confirm Password:</label></td>
-                <td><input type="password" id="c_pass" name="pass" onblur="validate4()" ></td></tr>
+                    <td><input type="password" id="c_pass" name="pass" onblur="validate4()" ></td>
+                </tr>
                 <tr><td></td><td><span id="error4"></span></td></tr>
 
-                <tr><td><label for="emailID">Confirm Password:</label></td>
-                    <td><input type="text" id="emailID" name="pass" onblur="validate4()" ></td></tr>
-                    <tr><td></td><td><span id="error5"></span></td></tr>
+                <tr><td><label for="emailID">Email ID:</label></td>
+                    <td><input type="text" id="emailID" onblur="validate5()" ></td>
+                </tr>
+                <tr><td></td><td><span id="error5"></span></td></tr>
 
-                <tr><td><label for="age">Age:</label></td>
-                <td><input type="number" id="age" name="age" min="1" max="100" required></td></tr>
+                <tr><td><label>Age:</label></td>
+                <td><input type="number" id="age" onblur="validate6()"></td></tr>
+                <tr><td></td><td><span id="error6"></span></td></tr>
+
                 <tr><td><label for="mobileno">Mobile :</label></td>
                     <!-- it should contain only digits -->
-                    <td><input type="tel" id="mobileno" pattern="[0-9]{10}" required></td></tr>
+                    <td><input type="tel" id="mob" onblur="validate7()"></td>
+                </tr>
+                <tr><td></td><td><span id="error7"></span></td></tr>
+
                 <tr><td><label>Interested Courses :</label></td>
                     <td>
                     <label for="java">JAVA:</label><input type="checkbox" id="java" name="courses">
@@ -57,9 +67,11 @@
                     <label for="web">WEB:</label><input type="checkbox" id="web" name="courses">
                     </td>
                 </tr>
+
                 <tr><td><label for="address">Address :</label></td>
                     <td><textarea id="address"></textarea></td>
                 </tr>
+
                 <tr><td><label for="address">City :</label></td>
                     <td>
                         <select id="city">
@@ -68,12 +80,14 @@
                         </select>
                     </td>
                 </tr>
+
                 <tr><td><label>Gender :</label></td>
                     <td>
                     <label for="male">MALE:</label><input type="radio" id="male" name="gender" value="male">
                     <label for="female">FEMALE:</label><input type="radio" id="female" name="gender"  value="female">
                     </td>
                 </tr>
+
                 <tr><td colspan="2"><input type="submit" value="Register"><input type="reset"></td></tr>
             </table>
         </form>
