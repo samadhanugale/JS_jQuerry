@@ -12,17 +12,20 @@ function validate1(){
     if(fname == ''){
         spanNode.innerHTML = "Thie field is required!";
         fnameNode.style.border = "2px solid red";
+        return false;
     }
 
     //space given in name
     else if(fname.includes(' ')){
         spanNode.innerHTML = "spacenot allowed";
         fnameNode.style.border = "2px solid red";
+        return false;
     }
 
     //name given correctly
     else{
         fnameNode.style.border = "2px solid green";
+        return true;
     }
 }
 //---------------------------------------Last Name--------------------------------------------------------
@@ -39,17 +42,20 @@ function validate2(){
     if(lname == ''){
         spanNode1.innerHTML = "Thie field is required!";
         lnameNode.style.border = "2px solid red";
+        return false;
     }
 
     //space given in name
     else if(lname.includes(' ')){
         spanNode1.innerHTML = "spacenot allowed";
         lnameNode.style.border = "2px solid red";
+        return false;
     }
 
     //name given correctly
     else{
         lnameNode.style.border = "2px solid green";
+        return true;
     }
 }
 //-----------------------------------------------------------------------------------------------
@@ -81,13 +87,16 @@ function validate3(){
     if(passNode == ""){
         spanNode3.innerHTML = "This field is required!";
         passNode.style.border = "2px solid red";
+        return false;
     }
     else if(password.length<4 || password.length>8){
         spanNode3.innerHTML = "password shouild in between 4 to 8 characters";
         passNode.style.border = "2px solid red";
+        return false;
     }
     else{
         passNode.style.border = "3px solid green";
+        return true;
     }
 }
 //-------------------------------------confirm Password----------------------------------------------------------
@@ -101,13 +110,16 @@ function validate4(){
     if(passNode == ""){
         spanNode4.innerHTML = "This field is required!";
         cpassNode.style.border = "2px solid red";
+        return false;
     }
    else if (cpassword!=password){
     spanNode4.innerHTML = "Password not matching!!";
     cpassNode.style.border = "2px solid red";
+    return false;
    }
    else{
     cpassNode.style.border = "3px solid green";
+    return true;
    }
 }
 
@@ -125,15 +137,18 @@ function validate5(){
     if(email == ""){
         spanNode5.innerHTML = "This field is required!";
         emailNode.style.border = "2px solid red";
+        return false;
     }
 
    else if (emailStat != true){
     spanNode5.innerHTML = "Incorrect Email";
     emailNode.style.border = "2px solid red";
+    return false;
    }
 
    else{
     emailNode.style.border = "3px solid green";
+    return false;
    }
 }
 
@@ -150,10 +165,12 @@ function validate6(){
    if (age <1){
     spanNode6.innerHTML = "Invalid age!";
     ageNode.style.border = "2px solid red";
+    return false;
    }
 
    else{
     ageNode.style.border = "3px solid green";
+    return true;
    }
 }
 
@@ -172,9 +189,22 @@ function validate7(){
    if (valid != true ){
     spanNode7.innerHTML = "Invalid Number!";
     mobNode.style.border = "2px solid red";
+    return false;
    }
 
    else{
     mobNode .style.border = "3px solid green";
+    return true;
    }
+}
+
+function validateForm(){
+    let v1 = validate1();
+    let v2 = validate2();
+    let v3 = validate3();
+    let v4 = validate4();
+    let v5 = validate5();
+    let v6 = validate6();
+    let v7 = validate7();
+    
 }
