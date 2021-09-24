@@ -206,5 +206,39 @@ function validateForm(){
     let v5 = validate5();
     let v6 = validate6();
     let v7 = validate7();
+
+    return(v1&&v2&&v3&&v4&&v5&&v6&&v7 == true)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 }
